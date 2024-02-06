@@ -9,9 +9,9 @@ services:
         tty: true
         stdin_open: true
         ports:
-            - "8069:8069"
+            - "8016:8016"
         volumes:
-            - ./addons:/mnt/extra-addons
+            - ./addons:/mnt/extra-addons, odoo2dev/addons
             - ./conf:/etc/odoo
         environment:
             - HOST=postgres
